@@ -46,11 +46,11 @@ nav ul{
 }
 ul li{
     font-family: 'Courgette', cursive;;
-    font-size: 35px;
-    display: inline-flex;
+    font-size: 34px;
+    display: flex;
     margin-top: 5px;
-    margin-right: 80px;
-    margin-left: 100px;
+    margin: auto;
+    padding: 1em;
 }
 .footer{
     background-color: #E0C8AE;
