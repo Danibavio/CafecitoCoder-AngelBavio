@@ -64,7 +64,7 @@ ul li{
 
 }
 a{
-    color: #534540 ;
+    color: #534540 !important;
     outline: none;
     text-decoration: none;
     background-image: linear-gradient(#E0C8AE, #935A46);
@@ -323,4 +323,7 @@ a:hover, a:focus{
         margin: 0 auto;
     }
     
+}
+.carousel-inner{
+    margin-top: 2em;
 }
