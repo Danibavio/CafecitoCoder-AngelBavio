@@ -1,0 +1,67 @@
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "cuadro1  cuadro2" 
+                        "cuadro3  cuadro4";
+    text-align: center;
+
+    img {
+    width: 500px;
+    height: 350px;
+    }
+}
+
+.cuadro1 {
+    grid-area: cuadro1;
+}
+
+.cuadro2 {
+    grid-area: cuadro2;
+}
+.cuadro3 {
+    grid-area: cuadro3;
+}
+
+.cuadro4 {
+    grid-area: cuadro4;
+}
+@media screen and (max-width: 800px) {
+	.contenedor {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			padding: 1em;
+		}
+	}
+	.cuadro1 {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.cuadro2 {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.cuadro3 {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.cuadro4 {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.recetaTexto {
+		text-align: center;
+		padding: 1em;
+	}
+}
+
