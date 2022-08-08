@@ -1,11 +1,3 @@
-@charset "UTF-8";
-/* colores */
-/* fuentes */
-/* tamaños */
-/* $tamañoTitulo: 70px;
-$tamañoSubtitlo: 30px;
-$tamañoSubChico: 25px;
- */
 * {
   margin: 0;
   padding: 0;
@@ -28,13 +20,13 @@ body {
   position: relative;
   padding-bottom: 3em; }
 
-#tituloPagina {
+#tituloPagina, .tituloReceta, .tituloRegion {
   font-family: "Milonga", cursive;
   font-size: 70px;
   color: #935A46;
   text-align: center; }
 
-#subtituloChico {
+#subtituloChico, .subtituloReceta, .finalReceta {
   font-family: "Courgette", cursive;
   font-size: 25px;
   color: #534540;
@@ -46,6 +38,7 @@ body {
   font-size: 30px;
   color: #935A46;
   text-align: center;
+  margin-top: 1em;
   margin-bottom: 20px; }
 
 #misionTitulo {
@@ -54,13 +47,13 @@ body {
   margin-top: 1em;
   text-align: center; }
 
-.info {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: #534540;
-  text-align: center;
-  font-size: 20px; }
+.info, .infoRegion, .enemigoCafe ul li {
+  padding: 0.5em;
+  margin-top: 5px;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  text-align: left;
+  font-size: 16px; }
 
 .fotoCafe img {
   margin: auto;
@@ -75,21 +68,18 @@ body {
 
 .lista_receta ul li {
   margin-top: 20px;
-  color: black;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  list-style-position: inside;
-  list-style-type: disc;
+  color: #534540;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
   display: block;
   text-align: center; }
 
-.lista_pasos ul ol {
-  margin-top: 20px;
-  color: black;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.tituloRegion {
+  padding: 0.5em; }
+
+.infoRegion {
   font-size: 20px;
-  display: block;
-  text-align: center; }
+  padding: 1,5em; }
 
 .carousel-inner {
   margin-top: 2em;
@@ -143,27 +133,6 @@ header ul li {
   position: fixed;
   text-align: center; }
 
-/* #tituloPagina{
-    font-family: $fuente-titulo;
-    font-size: $tamañoTitulo;
-    color: $colorPrimario;
-    text-align: center;
-    padding-top: 40px;
-}
-
-#subtituloChico{
-    font-family: $fuente-subtitulo;
-    font-size: $tamañoSubChico;
-    color: $colorSecundario;
-    text-align: center;
-}
-#subtituloGrande{
-    font-family: $fuente-subtitulo;
-    font-size: $tamañoSubtitlo;
-    color: $colorPrimario;
-    text-align: center;
-    margin-bottom: 20px;
-} */
 .contenedor {
   width: 100%;
   max-width: 1000px;
@@ -172,7 +141,8 @@ header ul li {
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "cuadro1  cuadro2"  "cuadro3  cuadro4";
+  grid-template-areas: "cuadro1  cuadro2" 
+ "cuadro3  cuadro4";
   text-align: center; }
   .contenedor img {
     width: 500px;
@@ -190,7 +160,7 @@ header ul li {
 .cuadro4 {
   grid-area: cuadro4; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
   .contenedor {
     display: flex;
     flex-direction: column;
@@ -239,8 +209,6 @@ header ul li {
   color: black; }
 
 .botonRegister {
-  /*  width: 100%;
-    height: 40px; */
   height: 40px;
   width: 100%;
   background-color: #F0D5B8;
@@ -251,8 +219,6 @@ header ul li {
   color: #935A46; }
 
 .botonLimpiar {
-  /*  width: 100%;
-    height: 25px; */
   height: 25px;
   width: 100%;
   background-color: #F0D5B8;
@@ -261,15 +227,36 @@ header ul li {
   font-size: 20px;
   color: #534540; }
 
-.contenedorReceta {
+@media screen and (max-width: 800px) {
+  .registroForm {
+    width: 600px; }
+  .formulario-info {
+    padding: 5px;
+    margin-bottom: 10px; } }
+
+.contenedorReceta, .contenedorRecetaBis {
+  padding-bottom: 5em;
   width: 100%;
   max-width: 1000px;
   margin: 20px auto;
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(2, 2fr);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "fotoReceta  lista_receta"  "fotoReceta  lista_pasos"; }
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px 60px 1fr 40px;
+  grid-gap: 100px 70px;
+  grid-template-areas: "tituloReceta tituloReceta"
+ "subtituloReceta subtituloReceta"
+ "fotoReceta lista_receta"
+ "finalReceta finalReceta"; }
+
+.tituloReceta {
+  grid-area: tituloReceta; }
+
+.subtituloReceta {
+  grid-area: subtituloReceta; }
+
+.finalReceta {
+  grid-area: finalReceta; }
 
 .lista_pasos {
   grid-area: lista_pasos; }
@@ -277,26 +264,151 @@ header ul li {
 .lista_receta {
   grid-area: lista_receta; }
 
-.fotoReceta {
-  background-image: url(../../assets/clod-brew.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 1em;
-  grid-area: fotoReceta; }
+.fotoReceta, .imgRegion {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border: 2px solid #534540;
+  border-radius: 100%;
+  grid-area: fotoReceta;
+  position: static; }
+
+@media screen and (max-width: 880px) {
+  .contenedorReceta, .contenedorRecetaBis {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .contenedorReceta img, .contenedorRecetaBis img {
+      width: 500px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 50%; } }
+
+.contenedorRecetaBis {
+  grid-template-areas: "tituloReceta tituloReceta"
+ "subtituloReceta subtituloReceta"
+ "lista_receta fotoReceta"
+ "finalReceta finalReceta"; }
+
+.lista_pasos ul ol {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px; }
+
+.regionesCafe {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  gap: 0.5em;
+  grid-template-areas: "tituloRegion tituloRegion"
+ "infoRegion   imgRegion"; }
+  .regionesCafe p {
+    padding: 1em; }
+
+.tituloRegion {
+  justify-self: center;
+  grid-area: tituloRegion; }
+
+.infoRegion {
+  grid-area: infoRegion; }
+
+.imgRegion {
+  justify-self: start;
+  width: 250px;
+  height: 250px;
+  grid-area: imgRegion; }
+
+#prensa {
+  width: 600px;
+  height: 300px;
+  padding: 2em;
+  float: right;
+  border-radius: 70px; }
+
+#corazon {
+  width: 600px;
+  float: right;
+  padding: 2em;
+  border-radius: 70px; }
+
+.prensa_pasos {
+  width: 100%;
+  padding-left: 2em;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-areas: "paso1 img1"
+ "paso2 img2"
+ "paso3 img3"
+ "paso4 img4"; }
+  .prensa_pasos img {
+    display: block;
+    margin: auto;
+    width: 140px;
+    border-radius: 30%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #534540; }
+
+.paso1 {
+  grid-area: paso1;
+  justify-self: center;
+  align-self: center; }
+
+.img1 {
+  grid-area: img1; }
+
+.paso2 {
+  align-self: center;
+  grid-area: paso2; }
+
+.img2 {
+  grid-area: img2; }
+
+.paso3 {
+  align-self: center;
+  grid-area: paso3; }
+
+.img3 {
+  grid-area: img3; }
+
+.paso4 {
+  align-self: center;
+  grid-area: paso4; }
+
+.img4 {
+  grid-area: img4; }
+
+.enemigoCafe ul li {
+  text-align: center;
+  font-size: 25px;
+  color: #935A46; }
+
+.enemigoCafe ul p {
+  color: #534540;
+  font-size: 20px; }
 
 @media screen and (max-width: 800px) {
-  .contenedorReceta {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: " fotoReceta"  "lista_receta"  "lista_pasos"; }
-  .fotoReceta {
-    grid-area: fotoReceta;
+  .regionesCafe {
+    display: flex;
+    flex-direction: column; }
+  .imgRegion {
+    display: block;
+    margin: auto; }
+  #corazon {
+    width: 400px;
+    float: none;
+    display: block;
+    margin: auto; }
+  #prensa {
+    width: 500px;
+    float: none;
+    display: block;
     margin: auto;
-    width: 300px;
-    height: 300px;
-    background-image: url(./assets/clod-brew.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; } }
+    } 
+  }

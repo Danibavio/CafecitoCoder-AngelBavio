@@ -1,0 +1,141 @@
+.lista_pasos {
+	ul {
+		ol {
+            display: flex;
+            flex-direction: column;
+            margin: 1em;
+			color: black;
+			font-family: $fuente-info;
+			font-size: map-get($map: $fontSize, $key: 'x-small');
+        }
+    }
+}
+.regionesCafe{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1.5fr 1fr; 
+    grid-template-rows: 0.5fr 1fr; 
+    gap: 0.5em; 
+    grid-template-areas: 
+                        "tituloRegion tituloRegion"
+                        "infoRegion   imgRegion"; 
+    p {
+        padding: 1em;
+    }
+}
+.tituloRegion {
+    justify-self: center; 
+    grid-area: tituloRegion; 
+}
+.infoRegion { 
+    grid-area: infoRegion; 
+}
+.imgRegion {
+    @extend .fotoReceta;
+    justify-self: start;
+    width: 250px;
+    height: 250px;
+    grid-area: imgRegion;
+}
+
+#prensa{
+    width: 600px;
+    height: 300px;
+    padding: 2em;
+    float: right;
+    border-radius: 70px;
+}
+#corazon{
+    width: 600px;
+    float: right;
+    padding: 2em;
+    border-radius: 70px;
+
+}
+
+
+.prensa_pasos {
+        width: 100%;
+        padding-left: 2em;
+        display: grid; 
+        gap: 10px;
+        grid-template-columns: 0.5fr 0.5fr; 
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr; 
+        grid-template-areas: 
+                            "paso1 img1"
+                            "paso2 img2"
+                            "paso3 img3"
+                            "paso4 img4"; 
+    img{
+        display: block;
+        margin: auto;
+        width: 140px;
+        border-radius: 30%;
+        border-style: solid;
+        border-width: 3px;
+        border-color: $colorSecundario;
+        
+    }
+    }
+    .paso1 {
+        grid-area: paso1;
+        justify-self: center;
+        align-self: center;
+}
+    .img1 { 
+        grid-area: img1; 
+        
+    }
+    .paso2 { align-self: center;
+        grid-area: paso2; }
+    .img2 { grid-area: img2; 
+    }
+    .paso3 { align-self: center;
+        grid-area: paso3; }
+    .img3 { 
+        grid-area: img3; 
+    }
+    .paso4 { 
+        align-self: center;
+        grid-area: paso4;
+    }
+    .img4 { 
+        grid-area: img4; 
+    }
+.enemigoCafe{
+    ul{
+        li{
+            @extend .info;
+            text-align: center;
+            font-size: map-get($map: $fontSize, $key: 'chico');
+            color: $colorPrimario ;
+        }
+        p{
+            color: $colorSecundario;
+            font-size: map-get($map: $fontSize, $key: 'link' );
+        }
+    }
+}
+@media screen and (max-width: 800px){
+    .regionesCafe{
+        display: flex;
+        flex-direction: column;
+    }
+    .imgRegion{
+        display: block;
+        margin: auto;
+    }
+    #corazon{
+        width: 400px;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+    #prensa{
+        width: 500px;
+        float: none;
+        display: block;
+        margin: auto;
+        /* object-fit: fill; */
+    }
+}

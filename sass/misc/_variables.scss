@@ -1,24 +1,21 @@
-/* colores */
+
 $colorPrimario:  #935A46;
 
 $colorSecundario: #534540;
 
-/* fuentes */
+
 
 $fuente-titulo: 'Milonga', cursive; 
 $fuente-subtitulo:'Courgette', cursive;
-$fuente-info: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$fuente-info:'Raleway', sans-serif;
+
 $fuente-form: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-/* tamaños */
 
-/* $tamañoTitulo: 70px;
-$tamañoSubtitlo: 30px;
-$tamañoSubChico: 25px;
- */
 $fontSize: (
     'grande': 70px,
     'mediano': 30px,
     'chico': 25px,
-    'link' : 20px
+    'link' : 20px,
+    'x-small': 16px,
 )
