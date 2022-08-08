@@ -44,12 +44,13 @@
 		flex-direction: column;
 		align-items: center;
 		img {
-			width: 500px;
-			height: 350px;
+			width: 250px;
+			height: 250px;
 			object-fit: cover; 
 			border-radius: 50%;
 		}
 	}
+	
 }
 .contenedorRecetaBis{
 	@extend .contenedorReceta;
@@ -57,4 +58,7 @@
 						"subtituloReceta subtituloReceta"
 						"lista_receta fotoReceta"
 						"finalReceta finalReceta";
+	}
+	.tituloReceta{
+		font-size: map-get($map: $fontSize, $key: 'mediano' );
 	}

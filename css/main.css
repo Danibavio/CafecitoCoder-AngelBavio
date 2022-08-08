@@ -35,7 +35,7 @@ body {
 
 #subtituloGrande {
   font-family: "Courgette", cursive;
-  font-size: 30px;
+  font-size: 40px;
   color: #935A46;
   text-align: center;
   margin-top: 1em;
@@ -92,10 +92,12 @@ body {
 @media screen and (max-width: 1024px) {
   nav ul {
     flex-direction: column;
-    align-items: center; }
+    align-content: center; }
   ul li {
     margin: auto;
-    margin-bottom: 1em; } }
+    margin-bottom: 1em; }
+  a, .linkReceta {
+    font-size: 25px; } }
 
 header nav {
   padding: 0.5em; }
@@ -133,6 +135,10 @@ header ul li {
   position: fixed;
   text-align: center; }
 
+@media screen and (max-width: 480px) {
+  .footer {
+    font-size: 13px; } }
+
 .contenedor {
   width: 100%;
   max-width: 1000px;
@@ -163,8 +169,11 @@ header ul li {
   .contenedor {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin: 0.5em; }
     .contenedor img {
+      width: 300px;
+      height: 200px;
       padding: 1em; }
   .cuadro1 {
     display: inline-flex;
@@ -184,7 +193,7 @@ header ul li {
     align-items: center; }
   .recetaTexto {
     text-align: center;
-    padding: 1em; } }
+    padding: 0.5em; } }
 
 .registroForm {
   width: 700px;
@@ -275,13 +284,16 @@ header ul li {
     flex-direction: column;
     align-items: center; }
     .contenedorReceta img, .contenedorRecetaBis img {
-      width: 500px;
-      height: 350px;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
       border-radius: 50%; } }
 
 .contenedorRecetaBis {
   grid-template-areas: "tituloReceta tituloReceta" "subtituloReceta subtituloReceta" "lista_receta fotoReceta" "finalReceta finalReceta"; }
+
+.tituloReceta {
+  font-size: 40px; }
 
 .lista_pasos ul ol {
   display: flex;
@@ -395,8 +407,10 @@ header ul li {
     display: block;
     margin: auto; }
   #prensa {
-    width: 500px;
+    width: 350px;
+    height: 200px;
     float: none;
     display: block;
-    margin: auto;
-    /* object-fit: fill; */ } }
+    margin: auto; }
+  .tituloRegion {
+    font-size: 40px; } }

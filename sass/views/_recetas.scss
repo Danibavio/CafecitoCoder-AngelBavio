@@ -35,7 +35,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		margin: 0.5em;
 		img {
+			width: 300px;
+			height: 200px;
 			padding: 1em;
 		}
 	}
@@ -61,7 +64,7 @@
 	}
 	.recetaTexto {
 		text-align: center;
-		padding: 1em;
+		padding: 0.5em;
 	}
 }
 

@@ -117,7 +117,7 @@ body{
 	nav {
 		ul {
 			flex-direction: column;
-			align-items: center;
+            align-content: center;
 		}
 	}
 	ul {
@@ -126,4 +126,7 @@ body{
 			margin-bottom: 1em;
 		}
 	}
+    a{
+        font-size: map-get($map: $fontSize, $key: 'chico' );
+    }
 }

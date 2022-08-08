@@ -132,10 +132,13 @@
         margin: auto;
     }
     #prensa{
-        width: 500px;
+        width: 350px;
+        height: 200px;
         float: none;
         display: block;
         margin: auto;
-        /* object-fit: fill; */
+    }
+    .tituloRegion{
+        font-size: map-get($map: $fontSize, $key: 'mediano');
     }
 }

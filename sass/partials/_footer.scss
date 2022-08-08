@@ -8,3 +8,9 @@
     position: fixed;
     text-align: center;
 }
+@media screen and (max-width: 480px ) {
+    .footer{
+        font-size: 13px;
+    }
+    
+}
