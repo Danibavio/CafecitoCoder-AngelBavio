@@ -81,10 +81,6 @@ body {
   font-size: 20px;
   padding: 1,5em; }
 
-.carousel-inner {
-  margin-top: 2em;
-  width: 1000px; }
-
 .linkReceta {
   font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
@@ -147,7 +143,8 @@ header ul li {
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "cuadro1  cuadro2"  "cuadro3  cuadro4";
+  grid-template-areas: "cuadro1  cuadro2" 
+ "cuadro3  cuadro4";
   text-align: center; }
   .contenedor img {
     width: 500px;
@@ -253,7 +250,10 @@ header ul li {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 70px 60px 1fr 40px;
   grid-gap: 100px 70px;
-  grid-template-areas: "tituloReceta tituloReceta" "subtituloReceta subtituloReceta" "fotoReceta lista_receta" "finalReceta finalReceta"; }
+  grid-template-areas: "tituloReceta tituloReceta"
+ "subtituloReceta subtituloReceta"
+ "fotoReceta lista_receta"
+ "finalReceta finalReceta"; }
 
 .tituloReceta {
   grid-area: tituloReceta; }
@@ -291,7 +291,10 @@ header ul li {
       border-radius: 50%; } }
 
 .contenedorRecetaBis {
-  grid-template-areas: "tituloReceta tituloReceta" "subtituloReceta subtituloReceta" "lista_receta fotoReceta" "finalReceta finalReceta"; }
+  grid-template-areas: "tituloReceta tituloReceta"
+ "subtituloReceta subtituloReceta"
+ "lista_receta fotoReceta"
+ "finalReceta finalReceta"; }
 
 .tituloReceta {
   font-size: 40px; }
@@ -310,7 +313,8 @@ header ul li {
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 0.5fr 1fr;
   gap: 0.5em;
-  grid-template-areas: "tituloRegion tituloRegion" "infoRegion   imgRegion"; }
+  grid-template-areas: "tituloRegion tituloRegion"
+ "infoRegion   imgRegion"; }
   .regionesCafe p {
     padding: 1em; }
 
@@ -347,7 +351,10 @@ header ul li {
   gap: 10px;
   grid-template-columns: 0.5fr 0.5fr;
   grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-  grid-template-areas: "paso1 img1" "paso2 img2" "paso3 img3" "paso4 img4"; }
+  grid-template-areas: "paso1 img1"
+ "paso2 img2"
+ "paso3 img3"
+ "paso4 img4"; }
   .prensa_pasos img {
     display: block;
     margin: auto;
